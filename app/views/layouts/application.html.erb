@@ -11,10 +11,10 @@
 
   <body>
 
-    <div class="row" style="margin-top: 0.5em"> <!-- begin logo bar -->
+    <div class="row image-back front" style="margin-top: 0.5em"> <!-- begin logo bar -->
       <div class="col-lg-12 col-md-12 logo-bar">
         <div class="col-lg-3 col-md-3 col-sm-12" style="text-align: center;">
-          <%= image_tag 'logo.jpeg', :width=> '130', :height=> '95' %>
+          <%= link_to (image_tag 'logo.jpeg', :width=> '130', :height=> '95'), root_path %>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12">
           <div class="navbar"> <!-- begin nav bar -->
@@ -60,8 +60,8 @@
                 <li>
                   <%= link_to 'fale conosco' %>
                   <ul>
-                    <li><%= link_to 'duvidas' %></li>
-                    <li><%= link_to 'orçamentos' %></li>
+                    <li><%= link_to 'duvidas', contacts_doubt_path %></li>
+                    <li><%= link_to 'orçamentos', contacts_budget_path %></li>
                     <li><%= link_to 'nossos contatos' %></li>
                   </ul>
                 </li>
