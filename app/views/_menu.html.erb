@@ -1,0 +1,61 @@
+<div class="col-lg-12 col-md-12 logo-bar">
+  <div class="col-lg-3 col-md-2 col-sm-12" style="text-align: center; margin-top: 2.5em;">
+    <%= link_to (image_tag 'logo.png', :width=> '180', :height=> '60'), root_path %>
+  </div>
+  <div class="col-lg-9 col-md-10 col-sm-12">
+    <div class="navbar"> <!-- begin nav bar -->
+      <input type="checkbox" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+      <nav class="menus">
+        <ul>
+          <li>
+            <%= link_to 'institucional' %>
+            <ul>
+              <li><%= link_to 'quem somos?' %></li>
+              <li><%= link_to 'nossos valores' %></li>
+              <li><%= link_to 'nossa equipe' %></li>
+              <li><%= link_to 'nossos clientes' %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'cursos' %>
+            <ul>
+              <li><%= link_to 'agenda de cursos' %></li>
+              <li><%= link_to 'inscrições' %></li>
+              <li><%= link_to 'cursos em parceria' %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'consultoría' %>
+            <ul>
+              <li><%= link_to 'escolar', consulting_school_path %></li>
+              <li><%= link_to 'financeira', consulting_financial_path %></li>
+              <li><%= link_to 'empresarial', consulting_company_path %></li>
+              <li><%= link_to 'contábil' %></li>
+              <li><%= link_to 'pública' %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'concursos' %>
+            <ul>
+              <li><%= link_to 'abertos' %></li>
+              <li><%= link_to 'em andamento' %></li>
+              <li><%= link_to 'finalizados' %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'fale conosco' %>
+            <ul>
+              <li><%= link_to 'duvidas', contacts_doubt_path %></li>
+              <li><%= link_to 'orçamentos', contacts_budget_path %></li>
+              <li><%= link_to 'nossos contatos' %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to 'trabalhe aqui' %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
