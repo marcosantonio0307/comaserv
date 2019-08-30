@@ -1,0 +1,40 @@
+<div class="row">
+	<%= render '/menu' %>
+</div>
+
+<div class="image-back background">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 box-center" style="padding-right: 2em;">
+				<h1>CONTATOS</h1><br>
+				<p align="center">Entre em contato conosco para saber como desenvolver sua empresa e equipe!</p>
+				<p align="center"><b>A ComaServ Consultoria e Acessoria esta pronta para lhe atender e identificar quais as melhores soluções para o crescimento da sua organização!</b></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 box-center">
+				<p align="center"><%= image_tag 'location.png', :width=> '40px' %> </p>
+				<p align="center"><b> Estamos localizado na Rua Avelino Freitas, 416 – Centro. São Raimundo Nonato - PI</b></p>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12 box-center">
+				<p align="center"><%= image_tag 'whatsapp.png', :width=> '40px' %> </p>
+				<p align="center"> Tel: <%= link_to '89 98114-3881', 'https://api.whatsapp.com/send?1=pt_BR&phone=5589981107065' %></p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 box-center">
+				<p align="center"><%= image_tag 'instagram.png', :width=> '40px' %> </p>
+				<p align="center"> @comaserv</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 box-center">
+				<p align="center"><%= image_tag 'facebook.png', :width=> '40px' %> </p>
+				<p align="center"> facebook.com/comaserv</p>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 box-center">
+				<p align="center"><%= image_tag 'email.png', :width=> '40px' %> </p>
+				<p align="center"> comaserv@outlook.com</p>
+			</div>
+		</div>
+	</div>
+</div>
