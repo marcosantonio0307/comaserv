@@ -13,5 +13,54 @@
     <div class="primary-container">
       <%= yield %>
     </div>
+
+    <div class="row footer-link">
+      <div class="col-lg-12 col-md-12 col-sm-12 footer-1">
+        <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>INSTITUCIONAL</h4>
+          <p><%= link_to 'Quem Somos?', institutional_me_path %></p>
+          <p><%= link_to 'Nossa Equipe', institutional_equip_path %></p>
+          <p><%= link_to 'Nossa Galeria' %></p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>CURSOS</h4>
+          <p><%= link_to 'Agenda de Cursos' %></p>
+          <p><%= link_to 'Inscrições' %></p>
+          <p><%= link_to 'Cursos em Parceria' %></p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>CONSULTORIA</h4>
+          <p><%= link_to 'Escolar', consulting_school_path %></p>
+          <p><%= link_to 'Financeira', consulting_financial_path %></p>
+          <p><%= link_to 'Empresarial', consulting_company_path %></p>
+          <p><%= link_to 'Contábil', consulting_accounting_path %></p>
+          <p><%= link_to 'Pública', consulting_public_path %></p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>CONCURSOS</h4>
+          <p>Abertos</p>
+          <p>Em Andamento</p>
+          <p>Concluídos</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>FALE CONOSCO</h4>
+          <p><%= link_to 'Duvidas', contacts_doubt_path %></p>
+          <p><%= link_to 'Orçamentos', contacts_budget_path %></p>
+          <p><%= link_to 'Nossos Contatos', contacts_mycontacts_path %></p>
+        </div>
+           <div class="col-lg-2 col-md-2 col-sm-2" align="left">
+          <h4>TRABALHE CONOSCO</h4>
+          <p>Faça Parte</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="footer-2">
+          <p>&copy; ComaServ Todos os direitos reservados</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

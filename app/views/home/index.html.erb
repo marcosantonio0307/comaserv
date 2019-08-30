@@ -1,13 +1,16 @@
 <div class="row image-back front" style="margin-top: 0em"> <!-- begin logo bar -->
       <%= render '/menu' %>
-      <h1 class="label-front">Resultados com Excelência!</h1>
+      <div class="label-front">
+      	<p><%= image_tag 'logo.png' %></p>
+      	<h1>Resultados com Excelência!</h1>
+      </div>
 </div>
 
 <div class="row">
 	<div class="col-lg-12 col-md-12 col-sm-12">
 
-		<div class="white-center" style="">
-			<h2>Conheça alguns de nossos serviços!</h2>
+		<div class="title-center">
+			<h2 style="font-size: 3em"><b>CONHEÇA ALGUNS DE NOSSOS SERVIÇOS!</b></h2>
 		</div>
 	</div>
 </div>
@@ -17,29 +20,42 @@
 	<div class="col-lg-12">
 		<div class="col-lg-3 col-md-3 col-sm-6 box-1">
 			<%= link_to (image_tag 'school-b.jpg'), consulting_school_path %>
-			<h4>consultoria escolar</h4>
+			<h4>Consultoria Escolar</h4>
 		</div>
 		
 		<div class="col-lg-3 col-md-3 col-sm-6 box-1">
 			<div class="">
 				<%= image_tag 'financial-b.jpg' %>
-				<h4>consultoria financeira</h4>
+				<h4>Consultoria Financeira</h4>
 			</div>
 		</div>
 
 		<div class="col-lg-3 col-md-3 col-sm-6 box-1">
 			<div class="">
 				<%= image_tag 'accounting-b.jpg' %>
-				<h4>consultoria contábil</h4>
+				<h4>Consultoria Contábil</h4>
 			</div>
 		</div>
 
 		<div class="col-lg-3 col-md-3 col-sm-6 box-1">
 			<div class="">
 				<%= image_tag 'company-b.png' %>
-				<h4>consultoria empresarial</h4>
+				<h4>Consultoria Empresarial</h4>
 			</div>
 		</div>
 	</div>
 
+</div>
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: 5%; color: ; text-align: justify; padding: 7% 2em; font-size: 2.2em ">
+		<p><b>A nossa missão é promover o desenvolvimento de pessoas e organizações aumentando o seu diferencial competitivo ajudando-os a se tornarem cada vez melhores no seu segmento de negócios!</b></p>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-12">
+		<section class="gallery">
+			<div class="picture"><%= link_to (image_tag 'banner-logo.png') %></div>
+			<div class="picture"><%= link_to (image_tag 'budget.png') %></div>
+			<div class="picture"><%= link_to (image_tag 'events.png') %></div>
+		</section>
+	</div>
 </div>
