@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'contacts/doubt' => 'contacts#doubt'
   get 'contacts/budget' => 'contacts#budget'
-  get 'contacts/mycontacts' => 'contacts#mycontacts'
+  get 'contacts/contacts' => 'contacts#contacts'
 
   get 'institutional/me' => 'institutional#me'
   get 'institutional/equip' => 'institutional#equip'

@@ -183,12 +183,6 @@ label[for="bt_menu"] {
 	background-size: 100%;
 }
 
-.company {
-	background-image: url(company.png);
-	background-repeat: no-repeat;
-	background-size: 100%;
-}
-
 .me {
 	background-image: url(logo-background.png);
 	background-repeat: no-repeat;
