@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'contacts/budget' => 'contacts#budget'
   get 'contacts/contacts' => 'contacts#contacts'
 
+  get 'courses' => 'courses#index'
+
   get 'institutional/me' => 'institutional#me'
   get 'institutional/equip' => 'institutional#equip'
 end
