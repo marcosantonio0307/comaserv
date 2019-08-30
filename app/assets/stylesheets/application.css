@@ -272,6 +272,26 @@ label[for="bt_menu"] {
 	margin-bottom: 3em;
 }
 
+.courses {
+	transition: .4s;
+	background: #A9BCF5;
+	padding: 0.5em 3em;
+	margin-top: 2em;
+	text-decoration: none;
+	color: #1c1c1c;
+	border-radius: 1em;
+}
+
+.courses h3 {
+	font-weight: bold;
+}
+
+.courses:hover {
+	background: #F78181;
+	padding-left: 40%;
+	transition: .4s;
+}
+
 .box-1 {
 	height: 17em;
 	overflow: hidden;
