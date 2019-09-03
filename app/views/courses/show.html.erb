@@ -1,0 +1,32 @@
+<div class="row">
+	<%= render '/menu' %>
+</div>
+
+<div class="image-back background">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 box-course">
+				<h1><%= @course.title %></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 box-course">
+				<h2>DESCRIÇÃO</h2>
+				<p><%= @course.description %></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 box-course">
+				<h2>CONTEÚDO DO CURSO</h2>
+				<p><%= @course.matters %></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 box-course">
+				<h2>SOLICITE O ORÇAMENTO PARA ESSE CURSO!</h2>
+				<div style="text-align: center;">
+					<%= link_to 'Orçamento $', contacts_budget_path, class: 'btn btn-budget' %>
+					<%= link_to 'Duvida ?', contacts_doubt_path, class: 'btn btn-doubt' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
