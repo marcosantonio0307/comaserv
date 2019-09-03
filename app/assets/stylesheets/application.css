@@ -288,8 +288,32 @@ label[for="bt_menu"] {
 
 .courses:hover {
 	background: #F78181;
-	padding-left: 40%;
+	padding-left: 30%;
 	transition: .4s;
+}
+
+.box-course {
+	margin: 2em auto;
+}
+
+.box-course h1 {
+	text-align: center;
+	font-weight: bold;
+	background: #0B0B3B;
+	color: #fff;
+	padding: 0.5em 1em;
+	border-radius: 1em;
+}
+
+.box-course h2 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.box-course p {
+	text-align: justify;
+	font-size: 1.3em;
+	padding: 1em;
 }
 
 .box-1 {
