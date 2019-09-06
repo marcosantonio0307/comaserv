@@ -1,0 +1,18 @@
+<%= render 'logobar' %>
+
+<div class="row">
+	<div class="container">
+		<div class="col-lg-2"></div>
+		<%= link_to admin_budgets_open_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>Orçamentos em Aberto</p>
+			</div>
+		<% end %>
+
+		<%= link_to admin_budgets_closed_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>Orçamentos Respondidos</p>
+			</div>
+		<% end %>
+	</div> 
+</div>

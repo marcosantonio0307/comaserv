@@ -1,0 +1,18 @@
+<%= render 'logobar' %>
+
+<div class="row">
+	<div class="container">
+		<div class="col-lg-2"></div>
+		<%= link_to admin_doubts_open_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>Duvidas em Aberto</p>
+			</div>
+		<% end %>
+
+		<%= link_to admin_doubts_closed_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>Duvidas Respondidas</p>
+			</div>
+		<% end %>
+	</div> 
+</div>

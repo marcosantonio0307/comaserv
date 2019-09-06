@@ -1,0 +1,37 @@
+<%= render 'logobar' %>
+
+<div class="row">
+	<div class="container">
+		<%= link_to admin_courses_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>CURSOS</p>
+			</div>
+		<% end %>
+		<%= link_to root_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>GALERIA</p>
+			</div>
+		<% end %>
+		<%= link_to root_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>CONCURSOS</p>
+			</div>
+		<% end %>
+		<%= link_to admin_budgets_index_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>ORÇAMENTOS</p>
+			</div>
+		<% end %>
+		<%= link_to admin_doubts_index_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>DUVIDAS</p>
+			</div>
+		<% end %>
+		<%= link_to admin_resumes_index_path do %>
+			<div class="col-lg-3 col-md-4 col-sm-12 box-admin">
+				<p>CURRÍCULOS</p>
+			</div>
+		<% end %>
+	</div>
+
+</div>
