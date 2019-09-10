@@ -9,30 +9,30 @@
 		</div>
 		<div class="form-box">
 			<h4>Preencha o formulário abaixo com os dados necessários e entraremos em contato com você!</h4>
-			<%= form_tag new_form_path, method: :get do %>
+			<%= form_for @form do |f| %>
 				<p style="visibility: hidden;"><%= text_field_tag :category, 'doubt' %></p>
 				<div class="form-group">
-					<%= label_tag :nome %>
-					<%= text_field_tag :name, nil, class: 'form-control' %>
+					<%= f.label :nome %>
+					<%= f.text_field :name, class: 'form-control' %>
 				</div>
 				<div class="form-group">
-					<%= label_tag :email %>
-					<%= email_field_tag :email, nil, class: 'form-control' %>
+					<%= f.label :email %>
+					<%= f.email_field :email, class: 'form-control' %>
 				</div>
 				<div class="form-group">
-					<%= label_tag :telefone %>
-					<%= text_field_tag :phone, nil, class: 'form-control' %>
+					<%= f.label :telefone %>
+					<%= f.text_field :phone, class: 'form-control' %>
 				</div>
 				<div class="form-group">
-					<%= label_tag :empresa %>
-					<%= text_field_tag :company, nil, class: 'form-control' %>
+					<%= f.label :empresa %>
+					<%= f.text_field :company, class: 'form-control' %>
 				</div>
 				<div class="form-group">
-					<%= label_tag :duvida %>
-					<%= text_area_tag :description, nil, class: 'form-control' %>
+					<%= f.label :duvida %>
+					<%= f.text_area :description, class: 'form-control' %>
 				</div>
 				<div class="form-group">
-					<%= button_to :enviar, nil, class: 'btn-blue' %>
+					<%= f.submit :enviar, class: 'btn-blue' %>
 				</div>
 			<% end %>
 		</div>
