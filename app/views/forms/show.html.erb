@@ -59,6 +59,16 @@
 					<%= f.label :descrição %>
 					<%= f.text_area :description, class: 'form-control', :disabled=>true %>
 				</div>
+				<% if @form.category == 'resume' %>
+					<div class="form-group">
+						<%= f.label :curriculo %>
+						<% unless @form.files.empty? %>	
+							<p><%= link_to 'curriculo anexo', url_for(@form.files.first) %></p>
+						<% else %>
+							<p>Não há anexos</p>
+						<% end %>
+					</div>
+				<% end %>
 			<% end %>
 		</div>
 	</div>

@@ -15,37 +15,37 @@ class AdminController < ApplicationController
 
 	def doubts_open
 		@forms = Form.where(category: 'doubt', status: 'NOK')
-
+		@title = 'DUVIDAS EM ABERTO'
 		render 'form'
 	end
 
 	def doubts_closed
 		@forms = Form.where(category: 'doubt', status: 'OK')
-
+		@title = 'DUVIDAS RESPONDIDAS'
 		render 'form'
 	end
 
 	def budgets_open
 		@forms = Form.where(category: 'budget', status: 'NOK')
-
+		@title = 'ORÇAMENTOS EM ABERTO'
 		render 'form'
 	end
 
 	def budgets_closed
 		@forms = Form.where(category: 'budget', status: 'OK')
-
+		@title = 'ORÇAMENTOS RESPONDIDOS'
 		render 'form'
 	end
 
 	def resumes_open
 		@forms = Form.where(category: 'resume', status: 'NOK')
-
+		@title = 'NOVOS CURRICULOS'
 		render 'form'
 	end
 
 	def resumes_closed
 		@forms = Form.where(category: 'resume', status: 'OK')
-
+		@title = 'CURRICULOS ARQUIVADOS'
 		render 'form'
 	end
 end

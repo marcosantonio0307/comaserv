@@ -1,10 +1,16 @@
 class FormsController < ApplicationController
 
-	def new
-		@form = Form.new(category: params[:category], name: params[:name], email: params[:email], 
-		phone: params[:phone], company: params[:company], segment: params[:segment],
-		description: params[:description], status: 'NOK')
-		@form.save
+	before_action :new_form, only:[:budget, :doubt, :work]
+
+	def create
+		values = params.require(:form).permit!
+		@form = Form.create values
+		@form.update(category: params[:category], status: 'NOK')
+
+		if params[:files] != nil
+			@form.files.attach(params[:form][:files])
+		end
+		
 		redirect_to forms_confirm_path
 	end
 
@@ -16,10 +22,18 @@ class FormsController < ApplicationController
 			redirect_to admin_doubts_open_path, notice: 'Duvida Respondida!'
 		elsif @form.category == 'budget'
 			redirect_to admin_budgets_open_path, notice: 'Orçamento Respondido!'
+		elsif @form.category == 'resume'
+			redirect_to admin_resumes_open_path, notice: 'Curriculo Visto!'
 		end
 	end
 
 	def show
 		@form = Form.find(params[:id])
+	end
+
+	private
+
+	def new_form
+		@form = Form.new
 	end
 end

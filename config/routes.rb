@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   get 'consulting/accounting' => 'consulting#accounting'
   get 'consulting/public' => 'consulting#public'
 
-  get 'contacts/doubt' => 'contacts#doubt'
-  get 'contacts/budget' => 'contacts#budget'
   get 'contacts/contacts' => 'contacts#contacts'
-  get 'contacts/work' => 'contacts#work'
+
+  get 'forms/doubt' => 'forms#doubt'
+  get 'forms/budget' => 'forms#budget'
+  get 'forms/work' => 'forms#work'
 
   get 'courses' => 'courses#index'
   get 'courses/:id' => 'courses#show', as: :course
@@ -38,5 +39,7 @@ Rails.application.routes.draw do
 
   resources :admin
   resources :courses
-  resources :forms, only:[:new, :show]
+  resources :forms, only:[:new, :create, :show] do
+    resources :file_uploads, only:[:create]
+  end
 end
