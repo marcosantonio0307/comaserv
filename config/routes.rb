@@ -19,11 +19,14 @@ Rails.application.routes.draw do
   get 'courses/:id' => 'courses#show', as: :course
 
   get 'institutional/me' => 'institutional#me'
-  get 'institutional/equip' => 'institutional#equip'
+  get 'institutional/equip' => 'institutional#equip'  
 
   get 'admin/courses' => 'admin#courses', as: :admin_courses
   get 'admin/courses/:id/edit' => 'admin#edit_course', as: :edit_course
   get 'admin/courses/new' => 'admin#new_course', as: :new_course
+  get 'admin/mypictures' => 'admin#mypictures', as: :admin_mypictures
+  get 'admin/mypictures/new' => 'admin#new_picture', as: :new_picture
+  get 'admin/mypictures/:id' => 'admin#show_picture', as: :picture
   get 'admin/doubts/index' => 'admin#doubts_index'
   get 'admin/budgets/index' => 'admin#budgets_index'
   get 'admin/resumes/index' => 'admin#resumes_index'
@@ -39,7 +42,9 @@ Rails.application.routes.draw do
 
   resources :admin
   resources :courses
-  resources :forms, only:[:new, :create, :show] do
-    resources :file_uploads, only:[:create]
+  resources :forms, only:[:new, :create, :show]
+
+  resources :mypictures, only:[:index, :create, :show] do
+    resources :file_uploads, only:[:new, :create, :destroy]
   end
 end
