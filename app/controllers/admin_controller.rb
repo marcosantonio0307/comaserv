@@ -13,6 +13,18 @@ class AdminController < ApplicationController
 		@course = Course.find(params[:id])
 	end
 
+	def mypictures
+		@pictures = Mypicture.all
+	end
+
+	def new_picture
+		@picture = Mypicture.new
+	end
+
+	def show_picture
+		@picture = Mypicture.find(params[:id])
+	end
+
 	def doubts_open
 		@forms = Form.where(category: 'doubt', status: 'NOK')
 		@title = 'DUVIDAS EM ABERTO'

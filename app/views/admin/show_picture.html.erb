@@ -1,0 +1,35 @@
+<%= render 'logobar' %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+
+			<div class="form-center">
+				<h1>Album: <%= @picture.name %></h1>
+				<span><%= link_to 'Voltar', admin_mypictures_path, class: 'btn btn-default' %></span>
+				<span><%= link_to 'Adicionar Foto', new_mypicture_file_upload_path(@picture), class: 'btn btn-primary' %></span>
+
+				<%= form_for @picture do |f| %>
+					<div class="form-group">
+						<br>
+						<%= f.label :nome %>
+						<%= f.text_field :name, class: 'form-control', :disabled=>true %>
+					</div>
+					<div class="form-group">
+						<%= f.label :descrição %>
+						<%= f.text_area :description, class: 'form-control', :disabled=>true %>
+					</div>
+					<div class="form-group">
+						<%= f.label :fotos %><br>
+						<% @picture.files.each do |file| %>
+							<div class="col-lg-3 col-md-3 col-sm-12" style="text-align: center; height: 150px;">
+									<%= link_to (image_tag file, :width=>'100%', :height=>'100%'), url_for(file) %>
+									<%= link_to "Remover", mypicture_file_upload_path(@picture, file), method: :delete, data: { confirm: "Tem certeza?" } %>		
+							</div>	
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<%= form_for @picture do |f| %>
+	<div class="form-group">
+		<%= f.label :nome %>
+		<%= f.text_field :name, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :descrição %>
+		<%= f.text_area :description, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.submit :salvar, class: 'btn btn-success' %>
+	</div>
+<% end %>
