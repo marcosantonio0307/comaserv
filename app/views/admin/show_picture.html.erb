@@ -8,6 +8,8 @@
 				<h1>Album: <%= @picture.name %></h1>
 				<span><%= link_to 'Voltar', admin_mypictures_path, class: 'btn btn-default' %></span>
 				<span><%= link_to 'Adicionar Foto', new_mypicture_file_upload_path(@picture), class: 'btn btn-primary' %></span>
+				<span><%= link_to 'editar', edit_picture_path(@picture), class: 'btn btn-warning' %></span>
+				<span><%= link_to 'excluir álbum', picture_path(@picture), method: :delete, class: 'btn btn-danger', data:{confirm: 'Deseja excluir este álbum?'} %></span>
 
 				<%= form_for @picture do |f| %>
 					<div class="form-group">
@@ -22,7 +24,7 @@
 					<div class="form-group">
 						<%= f.label :fotos %><br>
 						<% @picture.files.each do |file| %>
-							<div class="col-lg-3 col-md-3 col-sm-12" style="text-align: center; height: 150px;">
+							<div class="col-lg-3 col-md-3 col-sm-12" style="text-align: center; height: 150px; margin-bottom: 3em;">
 									<%= link_to (image_tag file, :width=>'100%', :height=>'100%'), url_for(file) %>
 									<%= link_to "Remover", mypicture_file_upload_path(@picture, file), method: :delete, data: { confirm: "Tem certeza?" } %>		
 							</div>	
