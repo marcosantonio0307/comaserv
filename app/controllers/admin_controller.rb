@@ -21,6 +21,10 @@ class AdminController < ApplicationController
 		@picture = Mypicture.new
 	end
 
+	def edit_picture
+		@picture = Mypicture.find(params[:id])
+	end
+
 	def show_picture
 		@picture = Mypicture.find(params[:id])
 	end
@@ -59,5 +63,9 @@ class AdminController < ApplicationController
 		@forms = Form.where(category: 'resume', status: 'OK')
 		@title = 'CURRICULOS ARQUIVADOS'
 		render 'form'
+	end
+
+	def show_form
+		@form = Form.find(params[:id])
 	end
 end

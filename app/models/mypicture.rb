@@ -1,3 +1,3 @@
 class Mypicture < ApplicationRecord
-	has_many_attached :files
+	has_many_attached :files, dependent: :destroy
 end

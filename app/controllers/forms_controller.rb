@@ -27,6 +27,31 @@ class FormsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@form = Form.find(params[:id])
+		Form.destroy params[:id]
+
+		if @form.category == 'doubt'
+			if @form.status == 'OK'
+				redirect_to admin_doubts_closed_path, notice: 'Apagado com Sucesso!'
+			else
+				redirect_to admin_doubts_open_path, notice: 'Apagado com Sucesso!'
+			end	
+		elsif @form.category == 'budget'
+			if @form.status == 'OK'
+				redirect_to admin_budgets_closed_path, notice: 'Apagado com Sucesso!'
+			else
+				redirect_to admin_budgets_open_path, notice: 'Apagado com Sucesso'
+			end	
+		elsif @form.category == 'resume'
+			if @form.status == 'OK'
+				redirect_to admin_resumes_closed_path, notice: 'Apagado com Sucesso!'
+			else
+				redirect_to admin_resumes_open_path, notice: 'Apagado com Sucesso!'
+			end	
+		end
+	end
+
 	def show
 		@form = Form.find(params[:id])
 	end

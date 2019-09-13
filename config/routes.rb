@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  
+  get  'users/sign_up' => 'users#noautorizate'
   devise_for :users
+  
   root 'home#index'
 
   get 'consulting/school' => 'consulting#school'
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   get 'forms/doubt' => 'forms#doubt'
   get 'forms/budget' => 'forms#budget'
   get 'forms/work' => 'forms#work'
+  get 'forms/:id/completed' => 'forms#completed', as: :completed_form
+  get 'forms/confirm' => 'forms#confirm'
 
   get 'courses' => 'courses#index'
   get 'courses/:id' => 'courses#show', as: :course
@@ -26,7 +29,9 @@ Rails.application.routes.draw do
   get 'admin/courses/new' => 'admin#new_course', as: :new_course
   get 'admin/mypictures' => 'admin#mypictures', as: :admin_mypictures
   get 'admin/mypictures/new' => 'admin#new_picture', as: :new_picture
+  get 'admin/mypictures/:id/edit' => 'admin#edit_picture', as: :edit_picture
   get 'admin/mypictures/:id' => 'admin#show_picture', as: :picture
+  delete  'admin/mypictures/:id' => 'mypictures#destroy'
   get 'admin/doubts/index' => 'admin#doubts_index'
   get 'admin/budgets/index' => 'admin#budgets_index'
   get 'admin/resumes/index' => 'admin#resumes_index'
@@ -36,15 +41,14 @@ Rails.application.routes.draw do
   get 'admin/budgets_closed' => 'admin#budgets_closed'
   get 'admin/resumes_open' => 'admin#resumes_open'
   get 'admin/resumes_closed' => 'admin#resumes_closed'
-
-  get 'forms/:id/completed' => 'forms#completed', as: :completed_form
-  get 'forms/confirm' => 'forms#confirm'
+  get 'admin/forms/:id' => 'admin#show_form', as: :form
+  delete 'admin/forms/:id' => 'forms#destroy'
 
   resources :admin
   resources :courses
-  resources :forms, only:[:new, :create, :show]
+  resources :forms, only:[:new, :create]
 
-  resources :mypictures, only:[:index, :create, :show] do
+  resources :mypictures, only:[:index, :create, :update, :show] do
     resources :file_uploads, only:[:new, :create, :destroy]
   end
 end
