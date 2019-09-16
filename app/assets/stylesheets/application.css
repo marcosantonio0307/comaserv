@@ -156,31 +156,31 @@ label[for="bt_menu"] {
 /* backgrounds images */
 
 .front {
-	background-image: url('front.jpg');
+	background-image: url(front.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .background {
-	background-image: url('background.png');
+	background-image: url(background.png);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
 
 .financial {
-	background-image: url('financial.png');
+	background-image: url(financial.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .accounting {
-	background-image: url('accounting.png');
+	background-image: url(accounting.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .me {
-	background-image: url('logo-background.png');
+	background-image: url(logo-background.png);
 	background-repeat: no-repeat;
 	background-size: 80%;
 	background-position: center;
