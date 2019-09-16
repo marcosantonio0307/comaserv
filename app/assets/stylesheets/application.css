@@ -523,7 +523,7 @@ label[for="bt_menu"] {
 
 /* ----- display small ------------ */
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
 
 	#barra_de_logo {
 		display: none;
