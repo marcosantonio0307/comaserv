@@ -57,12 +57,19 @@ body {
 	float: left;
 }
 
-.menus a {
+.menus p {
 	padding: 10px 15px;
 	display: block;
-	text-decoration: none;
 	text-align: center;
 	font-size: 1.2em;
+	color: #fff;
+	text-shadow: 1px 1px #0B0B3B;
+	font-weight: bold;
+	margin: 0;
+}
+
+.menus p a {
+	text-decoration: none;
 	color: #fff;
 	text-shadow: 1px 1px #0B0B3B;
 	font-weight: bold;
@@ -79,7 +86,7 @@ body {
 	position: absolute;
 }
 
-.menus a:hover {
+.menus p:hover {
 	color: #0B243B;
 	background: #e6e6e6;
 	text-shadow: none;
@@ -90,7 +97,7 @@ body {
 	border-bottom: solid 1px #ccc;
 }
 
-.menus ul ul li a {
+.menus ul ul li p {
 	color: #fff;
 	background: #0B243B;
 }
@@ -102,10 +109,11 @@ label[for="bt_menu"] {
 	color: white;
 	font-family: 'Arial';
 	text-align: center;
-	font-size: 30px;
+	font-size: 50px;
 	cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
+	line-height: 90px;
 }
 
 #bt_menu {
@@ -151,6 +159,10 @@ label[for="bt_menu"] {
 .title-index h1 {
 	width: 50%;
 	margin: 1em auto;
+}
+
+.link-home {
+	display: none;
 }
 
 /* backgrounds images */
@@ -529,6 +541,10 @@ label[for="bt_menu"] {
 		display: none;
 	}
 
+	.link-home {
+		display: block;
+	}
+
 	.menus {
 		margin-top: 5px;
 		margin-left: -110%;
@@ -543,16 +559,13 @@ label[for="bt_menu"] {
 	}
 
 	.menus ul ul {
-		position: static;
+		width: 100%;
+		position: absolute;
 		overflow: hidden;
 		max-height: 0;
 		transition: all .4s;
 	}
 
-	.menus ul li:hover ul {
-		height: auto;
-		max-height: 200px;
-	}
 
 	#bt_menu:checked ~ .menus {
 		margin-left: 0;
@@ -571,25 +584,39 @@ label[for="bt_menu"] {
 		width: 100%;
 	}
 
+	.logo-menu {
+		visibility: hidden;
+	}
+
+	.box-1 {
+		height: 400px;
+	}
+
 	.box-1 img {
 		opacity: 0.8;
 		height: 85%;
+		width: 80%;	
+		margin-left: 10%;
 	}
 
 	.box-1 h4 {
-		margin-top: 50%;
+		margin-top: 30%;
+		width: 80%;
+		margin-left: 10%;
+		line-height: 3em;
 	}
 
 	.box-1:hover h4 {
-		margin-top: 50%;
+		margin-top: 30%;
 	}
 
 	.label-front {
-		margin-top: 70%;
+		margin-top: 20%;
 	}
 
 	.gallery {
-		height: 15em;
+		height: 400px;
+		width: 90%;
 	}
 
 	.footer-link {
