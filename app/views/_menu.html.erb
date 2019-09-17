@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-md-12 logo-bar">
   <div class="col-lg-3 col-md-2 col-sm-12" style="text-align: center; margin-top: 2.5em;">
-    <%= link_to (image_tag 'logo.png', :width=> '180', :height=> '60'), root_path %>
+    <%= link_to (image_tag 'logo.png', :width=> '180', :height=> '60'), root_path, class: 'logo-menu' %>
   </div>
   <div class="col-lg-9 col-md-10 col-sm-12">
     <div class="navbar"> <!-- begin nav bar -->
@@ -8,53 +8,73 @@
         <label for="bt_menu">&#9776;</label>
       <nav class="menus">
         <ul>
+          <li class="btn-show link-home">
+            <p><%= link_to 'Inicio', root_path %></p>
+          </li>
           <li>
-            <%= link_to 'Institucional' %>
+            <p class="btn-show">Institucional</p>
             <ul>
-              <li><%= link_to 'Quem Somos?', institutional_me_path %></li>
-              <li><%= link_to 'Nossa Equipe', institutional_equip_path %></li>
-              <li><%= link_to 'Nossa Galeria', mypictures_path %></li>
+              <li><p><%= link_to 'Quem Somos?', institutional_me_path %></p></li>
+              <li><p><%= link_to 'Nossa Equipe', institutional_equip_path %></p></li>
+              <li><p><%= link_to 'Nossa Galeria', mypictures_path %></p></li>
             </ul>
           </li>
           <li>
-            <%= link_to 'Cursos' %>
+            <p class="btn-show">Cursos</p>
             <ul>
-              <li><%= link_to 'Agenda de Cursos', courses_path %></li>
-              <li><%= link_to 'Inscrições' %></li>
-              <li><%= link_to 'Cursos em Parceria' %></li>
+              <li><p><%= link_to 'Agenda de Cursos', courses_path %></p></li>
+              <li><p><%= link_to 'Inscrições' %></p></li>
+              <li><p><%= link_to 'Cursos em Parceria' %></p></li>
             </ul>
           </li>
           <li>
-            <%= link_to 'Consultoría' %>
+            <p class="btn-show">Consultoria</p>
             <ul>
-              <li><%= link_to 'Escolar', consulting_school_path %></li>
-              <li><%= link_to 'Financeira', consulting_financial_path %></li>
-              <li><%= link_to 'Empresarial', consulting_company_path %></li>
-              <li><%= link_to 'Contábil', consulting_accounting_path %></li>
-              <li><%= link_to 'Pública', consulting_public_path %></li>
+              <li><p><%= link_to 'Escolar', consulting_school_path %></p></li>
+              <li><p><%= link_to 'Financeira', consulting_financial_path %></p></li>
+              <li><p><%= link_to 'Empresarial', consulting_company_path %></p></li>
+              <li><p><%= link_to 'Contábil', consulting_accounting_path %></p></li>
+              <li><p><%= link_to 'Pública', consulting_public_path %></p></li>
             </ul>
           </li>
           <li>
-            <%= link_to 'Concursos' %>
+            <p class="btn-show">Concursos</p>
             <ul>
-              <li><%= link_to 'Abertos' %></li>
-              <li><%= link_to 'Em Andamento' %></li>
-              <li><%= link_to 'Finalizados' %></li>
+              <li><p><%= link_to 'Abertos' %></p></li>
+              <li><p><%= link_to 'Em Andamento' %></p></li>
+              <li><p><%= link_to 'Finalizados' %></p></li>
             </ul>
           </li>
           <li>
-            <%= link_to 'Fale Conosco' %>
+            <p class="btn-show">Fale Conosco</p>
             <ul>
-              <li><%= link_to 'Duvidas', forms_doubt_path %></li>
-              <li><%= link_to 'Orçamentos', forms_budget_path %></li>
-              <li><%= link_to 'Nossos Contatos', contacts_contacts_path %></li>
+              <li><p><%= link_to 'Duvidas', forms_doubt_path %></p></li>
+              <li><p><%= link_to 'Orçamentos', forms_budget_path %></p></li>
+              <li><p><%= link_to 'Nossos Contatos', contacts_contacts_path %></p></li>
             </ul>
           </li>
           <li>
-            <%= link_to 'Trabalhe Conosco', forms_work_path %>
+            <p><%= link_to 'Trabalhe Conosco', forms_work_path %></p>
           </li>
         </ul>
       </nav>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+$(".btn-show").click(function(){
+  var h = parseInt($('.menus ul li ul').height());
+  if (h == 0) {
+    $(".menus ul li ul").css("max-height", "200px");
+  } else {
+    $(".menus ul li ul").css("max-height", "0px");
+  }
+})
+
+
+  
+</script>
+
+
